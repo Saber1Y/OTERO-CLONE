@@ -5,34 +5,38 @@
   background-color: #ffffff;
   box-sizing: border-box;
 }
+
 :root {
   --color--primary: #75bf7a;
   --color--secondary: #000000;
   --color--extra: #9e9da2;
   --color--sin: #ffffffed;
 }
+
 .nav-container {
   position: relative;
   width: 100%;
-  /* min-height: 100vh; */
   overflow: hidden;
   box-sizing: border-box;
   z-index: 100;
   box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
     0 0 2px rgb(0 0 0 / 7%);
 }
+
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 20px;
 }
+
 nav ul li {
   display: inline-block;
   list-style: none;
   text-decoration: none;
   margin: 30px;
 }
+
 nav ul li a {
   text-decoration: none;
   padding: 0 10px;
@@ -40,6 +44,7 @@ nav ul li a {
   font-weight: 400;
   font-size: 20px;
 }
+
 .btn {
   border: 2px solid;
   background-color: #75bf7a;
@@ -50,10 +55,14 @@ nav ul li a {
   border-radius: 10px;
   cursor: pointer;
 }
+
 .container {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .col-1 {
@@ -77,10 +86,12 @@ nav ul li a {
   max-width: 100%;
   height: auto;
 }
+
 .button-container {
   padding: 20px;
   margin-left: -30px;
 }
+
 .btn-box {
   margin-left: 10px;
   padding: 12px 24px;
@@ -91,6 +102,7 @@ nav ul li a {
   border-radius: 10px;
   cursor: pointer;
 }
+
 .rec-container {
   display: flex;
   justify-content: space-evenly;
@@ -99,27 +111,32 @@ nav ul li a {
   margin: 100px 50px;
   background-color: #75bf7a;
 }
+
 .col--center_txt {
   margin-left: 30%;
   color: var(--color--extra);
   font-size: 20px;
   font-style: "Gilroy";
 }
+
 .container-square__txt {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .txt-1 {
   width: -80%;
   text-align: center;
 }
+
 div h5 {
   background: transparent;
   color: var(--color--sin);
   font-size: 20px;
 }
+
 #txt {
   border: 1px solid #fff;
   width: 400px;
@@ -128,48 +145,58 @@ div h5 {
   float: left;
   border-radius: 4px;
 }
+
 section h2 {
   text-align: center;
 }
+
 section span {
   color: var(--color--primary);
   font-family: sans-serif;
 }
+
 .row-img {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
+
 .col-10 {
   display: flex;
   justify-content: space-between;
   margin: 50px 100px;
 }
+
 .row-01 {
   position: relative;
   top: 60px;
 }
+
 .row-05 {
   position: relative;
   top: 15px;
   font-size: 20px;
   color: var(--color--extra);
 }
+
 .row-02 {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
+
 .row-o2__p {
   font-size: 30px;
   color: var(--color--secondary);
   font-weight: 600;
   opacity: 1;
 }
+
 .col-101 {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   margin: 50px 100px;
 }
+
 .row-050 {
   position: relative;
   top: 15px;
@@ -177,25 +204,78 @@ section span {
   font-size: 18px;
   color: var(--color--extra);
 }
+
 footer {
   position: relative;
   top: 200px;
   display: flex;
   justify-content: space-evenly;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* padding: 20px 10px; */
 }
+
 div p {
   font-size: 10px;
   color: var(--color--extra);
 }
-@media (max-width: 767px) {
+
+@media (max-width: 1200px) {
   .container {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 
-  .col-1,
+  .col-1 {
+    flex: 100%;
+    margin-top: 50px;
+  }
+
   .col-2 {
-    width: 100%;
+    flex: 100%;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .col--center_txt {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .container-square__txt {
+    justify-content: center;
+  }
+
+  .rec-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 20px;
+  }
+
+  .col-10 {
+    flex-direction: column;
+    margin: 50px 20px;
+  }
+
+  .row-01 {
+    top: 0;
+  }
+
+  .row-o2__p {
+    font-size: 24px;
+  }
+
+  .row-050 {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
   }
 }
