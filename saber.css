@@ -19,8 +19,8 @@
   overflow: hidden;
   box-sizing: border-box;
   z-index: 100;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
-    0 0 2px rgb(0 0 0 / 7%);
+  box-shadow: 0.5px 2px rgb(0 0 0 / 10%), 0 0.1px 1px rgb(0 0 0 / 6%),
+    0 0 1px rgb(0 0 0 / 7%);
 }
 
 .main-nav {
@@ -29,7 +29,6 @@
   align-items: center;
   margin: 20px;
 }
-
 nav ul li {
   display: inline-block;
   list-style: none;
@@ -44,7 +43,9 @@ nav ul li a {
   font-weight: 400;
   font-size: 20px;
 }
-
+nav ul li a:hover {
+  color: var(--color--primary);
+}
 .btn {
   border: 2px solid;
   background-color: #75bf7a;
@@ -75,11 +76,16 @@ nav ul li a {
 .col-1 span {
   font-size: 40px;
   font-weight: bolder;
+  color: var(--color--secondary);
 }
 
 .col-1 p {
   font-size: 15px;
   color: var(--color--extra);
+}
+div > p {
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 .col-2 img {
@@ -88,28 +94,47 @@ nav ul li a {
 }
 
 .button-container {
-  padding: 20px;
-  margin-left: -30px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .btn-box {
-  margin-left: 10px;
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #000000;
-  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 50px;
+  width: 240px;
+  height: 50px;
+  background-color: #000000ed;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
+  color: #ffffffed;
   cursor: pointer;
 }
 
+.btn-box img {
+  display: block;
+  width: 30px;
+  height: 29px;
+}
+.btn-box .txt-box {
+  background: transparent;
+  color: #ffffffed;
+  padding-left: 10px;
+}
+
+.btn-box > img {
+  background-color: transparent;
+}
 .rec-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 30px 20px;
-  margin: 100px 50px;
+  margin: 100px 200px;
   background-color: #75bf7a;
+  border-radius: 8px;
+  width: 1000px;
 }
 
 .col--center_txt {
@@ -136,7 +161,12 @@ div h5 {
   color: var(--color--sin);
   font-size: 20px;
 }
-
+input:focus {
+  outline: none;
+}
+input[type="text"] {
+  height: 67px;
+}
 #txt {
   border: 1px solid #fff;
   width: 400px;
@@ -157,12 +187,14 @@ section span {
 
 .row-img {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px;
 }
 
 .col-10 {
   display: flex;
   justify-content: space-between;
-  margin: 50px 100px;
+  margin: 50px 200px;
 }
 
 .row-01 {
@@ -194,7 +226,7 @@ section span {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
-  margin: 50px 100px;
+  margin: 50px 200px;
 }
 
 .row-050 {
@@ -277,5 +309,52 @@ div p {
     text-align: center;
     margin-top: 50px;
     padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 964px) {
+  .repsonsive-tg {
+    font-size: 19px;
+  }
+}
+/*
+@media screen and (max-width: 948px) {
+  .repsonsive-tg {
+    font-size: 18px;
+  }
+} */
+
+@media only screen and (max-width: 700px) {
+  .otero-image {
+    width: 180px;
+  }
+  .repsonsive-tg {
+    font-size: 10px;
+  }
+  div ul {
+    width: 100%;
+    background: linear-gradient(#ffffff);
+    border: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    top: 70px;
+    left: 2px;
+    z-index: 999;
+  }
+  div ul li {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    font-style: italic;
+  }
+  div ul li a {
+    background: transparent;
+  }
+  div ul li a:hover {
+    color: var(--color--primary);
+  }
+  .menu-image {
+    display: block;
   }
 }
