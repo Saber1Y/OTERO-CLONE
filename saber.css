@@ -97,6 +97,7 @@ div > p {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin: 30px 0;
 }
 
 .btn-box {
@@ -232,14 +233,18 @@ section span {
 .row-02 {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
-
+.row-02 span {
+  margin-top: 19px;
+}
 .row-o2__p {
   font-size: 30px;
   color: var(--color--secondary);
   font-weight: 600;
   opacity: 1;
+  margin: 20px 0;
 }
 
 .col-101 {
@@ -248,23 +253,75 @@ section span {
   flex-direction: row-reverse;
   margin: 50px 200px;
 }
-
+.row-020 {
+  position: relative;
+  left: -25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
 .row-050 {
   position: relative;
   top: 15px;
-  left: 50px;
+  left: 20px;
   font-size: 18px;
   color: var(--color--extra);
 }
-
-footer {
+.col-10 img {
+  padding: 0 100px;
+}
+.end-row {
   position: relative;
   top: 200px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 100px solid transparent;
+}
+.centered-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.centered-text P {
+  color: var(--color--primary);
+}
+.spaced--txt {
+  line-height: 2.1;
+}
+.spaced--txt p {
+  font-size: 13px;
+}
+.btn-box-1 {
+  display: flex;
+  align-items: center;
+  padding: 2px 13px;
+  width: 170px;
+  height: 47px;
+  background-color: #000000ed;
+  border: none;
+  border-radius: 4px;
+  color: #ffffffed;
+
+  cursor: pointer;
 }
 
+.btn-box-1 img {
+  display: block;
+  width: 30px;
+  height: 29px;
+}
+.btn-box-1 .txt-box {
+  background: transparent;
+  color: #ffffffed;
+  padding-left: 10px;
+}
+
+.btn-box-1 > img {
+  background-color: transparent;
+}
 div p {
   font-size: 10px;
   color: var(--color--extra);
