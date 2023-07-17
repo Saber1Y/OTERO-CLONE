@@ -1,8 +1,12 @@
-const toggleButton = document.querySelector('.toggle-button');
-const navbarLinks = document.querySelector('.navbar-links ul');
+var mobileMenu = document.getElementById('mobile-menu');
 
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active');
-});
+mobileMenu.style.maxHeight = "0px";
 
-
+function togglemenu() {
+    if (mobileMenu.style.maxHeight == "0px") {
+        mobileMenu.style.maxHeight = "200px";
+        mobileMenu.style.display = "block";
+    } else {
+        mobileMenu.style.maxHeight = "0px";
+    }
+}

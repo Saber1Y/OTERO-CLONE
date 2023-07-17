@@ -12,29 +12,56 @@
   --color--extra: #9e9da2;
   --color--sin: #ffffffed;
 }
-
+.body {
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 .nav-container {
+  width: 95%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   box-shadow: 0.5px 2px rgb(0 0 0 / 10%), 0 0.1px 1px rgb(0 0 0 / 6%),
     0 0 1px rgb(0 0 0 / 7%);
 }
 
-.navbar-links ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
+.menu-icon {
+  width: 30px;
+  cursor: pointer;
+  display: none;
+  color: #000000;
 }
-
-.navbar-links li {
+.navbar-links {
+  flex: 1;
+  text-align: right;
+  transition: 0.3s;
+}
+.navbar-links ul {
+  /* margin: 0;
+  padding: 0;
+  display: flex; */
+  background: transparent;
+}
+.otero-image {
+  width: 150px;
+  height: 40px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+.navbar-links ul li {
+  display: inline-block;
   list-style: none;
+  margin-left: 30px;
 }
 .navbar-links li a {
   text-decoration: none;
   color: #000000ed;
-  padding: 2rem;
-  display: block;
+  /* padding: 2rem;
+  display: block; */
+  font-size: 1rem;
 }
 .navbar-links ul li a:hover {
   color: var(--color--primary);
@@ -432,30 +459,46 @@ div p {
     width: 150px;
     padding: 0 10px;
   }
-  .toggle-button {
-    display: flex;
-  }
-  .navbar-links {
-    width: 100%;
-    display: none;
-  }
   .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
     box-shadow: none;
   }
   .navbar-links ul {
     width: 100%;
-    flex-direction: column;
+    background: #000000ed;
+    border: none;
+    position: absolute;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    top: 70px;
+    left: 2px;
+    z-index: 999;
   }
   .navbar-links ul li {
-    text-align: center;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: transparent;
   }
-  .navbar-links ul li a {
-    padding: 1rem 0;
-  }
-  .navbar-links.active {
+  .navbar-links ul a {
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .btn {
+    width: 130px;
+    height: 40px;
+    border: none;
+    text-transform: uppercase;
+  }
+  .btn:hover {
+    background-color: #ffffffed;
+  }
+  .menu-icon {
+    display: block;
   }
   .container {
     flex-direction: column-reverse;
@@ -560,12 +603,7 @@ div p {
   .row-02 span {
     margin-top: -2px;
   }
-  /* .row-02 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-  } */
+
   .col-10 {
     display: flex;
     flex-direction: column;
