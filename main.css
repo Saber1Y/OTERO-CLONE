@@ -478,7 +478,7 @@ div p {
     padding: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .otero-image {
     width: 150px;
     padding: 0 10px;
@@ -521,7 +521,7 @@ div p {
   .btn:hover {
     background-color: #ffffffed;
   }
-  .menu-icon {
+  charm_menu-hamburger.png {
     display: block;
   }
   .container {
@@ -533,7 +533,6 @@ div p {
     color: var(--color--secondary);
   }
   .col-1 p {
-    /* display: block; */
     font-size: 20px;
     color: var(--color--extra);
   }
@@ -664,5 +663,53 @@ div p {
   }
   .spaced--txt:nth-child(2) {
     display: none;
+  }
+} */
+@media screen and (min-width: 393px) {
+  .navbar-links {
+    display: none;
+  }
+  .nav-container {
+    box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-icon {
+    display: inline-block;
+  }
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-left: -50%;
+  }
+
+  .col-1 {
+    /* width: 200%; */
+    margin-left: 50%;
+  }
+  .col-2 {
+    margin: 0 auto;
+  }
+  .col-1 p,
+  .col-1 b {
+    /* color: pink; */
+  }
+  .col-1 b {
+    word-break: break-all;
+    font-size: 10px;
+    font-weight: 800;
+  }
+  .button-container {
+    margin: 0 5px 0 10px;
+  }
+  .btn-box {
+    height: 30px;
+    width: 155px;
+    padding-left: 5px;
+  }
+  .txt-box {
+    background: transparent;
+    color: red;
   }
 }
