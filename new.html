@@ -9,31 +9,31 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>OTERE</title>
   </head>
   <body>
-    <nav class="nav-container">
+    <main class="nav-container">
       <img src="/images/Otere.png" alt="OTERE" class="otero-image" />
       <nav class="navbar-links">
-        <ul id="mobile-menu">
-          <li><a href="#" class="nav-bar">Home</a></li>
-          <li><a href="#" class="nav-bar">How tere Works</a></li>
-          <li><a href="#" class="nav-bar">Tere benefits</a></li>
+        <ul id="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">How tere Works</a></li>
+          <li><a href="#">Tere benefits</a></li>
           <li>
             <a href="#"
               ><button class="btn"><span>Help Center</span></button></a
             >
           </li>
         </ul>
-        <!-- <hr style="width: 100%;"/> -->
-      </nav>
-      <img
-        src="/images/charm_menu-hamburger.png"
-        class="menu-icon"
-        alt="Menu-icon"
-        onclick="togglemenu()"
-      />
-    </nav>
+        </nav>
+        <div class="menu-icon" id="menu-icon">
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
+   
+    </main>
     <section class="hero-container">
       <div class="hero-main">
         <div class="Hero--main__txt">
@@ -135,7 +135,7 @@
         </div>
       </div>
     </section>
-    <h2 class="feature-Header"><span>TERE </span>  BENEFITS</h2>
+    <h2 class="feature-Header"><span>TERE </span> BENEFITS</h2>
     <section class="features">
       <div class="features-col">
         <div class="feautres--main_row">
@@ -217,5 +217,6 @@
     <div class="footer-txt">
       <p>All Rights Reserved tere by Codematics 2022</p>
     </div>
+    <script src="/main.js"></script>
   </body>
 </html>
