@@ -918,13 +918,15 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-top: 70px;
 }
 
 .txt-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 15px;
   align-items: center;
 }
 
